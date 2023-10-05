@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :style="style">
     <HeaderProduct 
       name="Nome do produto"
       price="50.00"
@@ -11,26 +11,40 @@
       name
       email
       phone
-      cep,
+      cep
       address
+      number
+      complement
+      neighborhood
+      city
+      state
+      @inputs="userFormData"
     />
   </div>
 </template>
+<style scoped>
+</style>
 
 <script>
-import HeaderProduct from '@/components/cards/HeaderProduct';
-import UserForm from '@/components/cards/UserForm';
+import HeaderProduct from '@/layouts/HeaderProduct';
+import UserForm from '@/layouts/UserForm';
 
 export default {
   name: 'App',
-
   components: {
     HeaderProduct,
     UserForm,
   },
-
-  data: () => ({
-    //
-  }),
+  data(){
+    return {
+      style: {
+      }
+    }
+  },
+  methods: {
+    userFormData(updateValue){
+      console.log(updateValue)
+    }
+  }
 };
 </script>

@@ -24,7 +24,7 @@
       </v-row>
       <v-row no-gutters color="#FF6905">
         <v-sheet color="#FF6905" max-height="32" width="680" class="text-xs-center">
-          <div class="text-xs-center">
+          <div class="text-xs-center pa-1 ml-1">
             <p class="white--text">{{ contact }}</p>
           </div>
         </v-sheet>
@@ -77,7 +77,7 @@
       },
     },
     mounted: () => {
-      console.log(this.name)
+
     }
   }
   </script>
